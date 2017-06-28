@@ -88,4 +88,12 @@ fun main(args: Array<String>) {
     for ((index, value) in array.withIndex()) {
         println("the element at $index is $value")
     }
+
+    //升序遍历 0-10
+    for (i in 0..10)
+        println("a:$i")
+
+    //降序遍历到3截止
+    for (i in 10 downTo 3)
+        println("b:$i")
 }
