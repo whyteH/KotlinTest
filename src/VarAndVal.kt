@@ -12,5 +12,4 @@ fun main(args: Array<String>) {
     var x = 5 // 自动推断出 `Int` 类型
     x += 1
     println("x = $x")
-    val d: String = "1"
-   }
+}
