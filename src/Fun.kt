@@ -24,11 +24,14 @@ fun main(args: Array<String>) {
     reformat("1", e = '_')
 }
 
+/*
+*
+*/
 fun sumReturnInt(a: Int, b: Int): Int {
-    return a + b;
+    return a + b
 }
 
-fun sumReturnInt1(a: Int, b: Int): Int = a + b;
+fun sumReturnInt1(a: Int, b: Int): Int = a + b
 
 fun sumReturnVar(a: Int, b: Int) = a + b
 
