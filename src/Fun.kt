@@ -25,7 +25,7 @@ fun main(args: Array<String>) {
 }
 
 /*
-*
+*返回Int类型的参数
 */
 fun sumReturnInt(a: Int, b: Int): Int {
     return a + b
@@ -33,24 +33,36 @@ fun sumReturnInt(a: Int, b: Int): Int {
 
 fun sumReturnInt1(a: Int, b: Int): Int = a + b
 
+/*
+* 返回推断类型的参数
+*/
 fun sumReturnVar(a: Int, b: Int) = a + b
 
+/*
+* 返回无意义的函数*/
 fun printSum(a: Int, b: Int): Unit {
     println("sum of $a and $b is ${a + b}")
 }
 
-
+/*
+*默认参数
+*/
 fun defaultParam(b: Array<String>, off: Int = 0, len: Int = b.size) {
     println("len is " + len)
 }
 
+/*
+* 可变数量的参数
+*/
 fun <T> asList(vararg ts: T): List<T> {
     val result = ArrayList<T>()
-    for (t in ts)
-        result.add(t)
+    result += ts
     return result
 }
 
+/*
+* 命名参数
+*/
 fun reformat(a: String,
              b: Boolean = true,
              c: Boolean = true,
