@@ -1,8 +1,12 @@
+import sun.plugin2.os.windows.Windows
+import java.awt.Window
+
 /**
  * Created by Whyte on 2017/6/29.
  */
 fun main(args: Array<String>) {
     class a {}
+    a()
 
     //主构造函数
     class P constructor(name: String) {
@@ -91,7 +95,18 @@ fun main(args: Array<String>) {
         override val x: Int = 0
     }
 
+    println(H().G().f())
 
+}
+
+
+
+class H {
+    private val b: Int = 1
+
+    inner class G {
+        fun f() = b
+    }
 }
 
 interface Foo {
@@ -105,16 +120,37 @@ class Bar2 : Foo {
 }
 
 open class A {
-    open fun f() { print("A") }
-    fun a() { print("a") }
+    open fun f() {
+        print("A")
+    }
+
+    fun a() {
+        print("a")
+    }
 }
 
 interface B {
-    fun f() { print("B") } // 接口成员默认就是“open”的
-    fun b() { print("b") }
+    fun f() {
+        print("B")
+    } // 接口成员默认就是“open”的
+
+    fun b() {
+        print("b")
+    }
 }
 
-class C() : A(), B {
+interface B1 {
+    fun f() {
+        print("B1")
+    } // 接口成员默认就是“open”的
+
+    fun c() {
+        print("c")
+    }
+}
+
+class C() : A(), B, B1 {
+
     // 编译器要求覆盖 f()：
     override fun f() {
         super<A>.f() // 调用 A.f()
