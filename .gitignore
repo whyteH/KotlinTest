@@ -1,4 +1,3 @@
 
-.idea/libraries/KotlinJavaRuntime.xml
-
-.idea/misc.xml
+.idea/
+out/
