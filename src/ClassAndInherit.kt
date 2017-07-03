@@ -1,6 +1,3 @@
-import sun.plugin2.os.windows.Windows
-import java.awt.Window
-
 /**
  * Created by Whyte on 2017/6/29.
  */
@@ -23,7 +20,7 @@ fun main(args: Array<String>) {
 
     }
 
-    //在init中初始化代码
+    //在init中初始化代码Ø
     class C(name: String) {
         init {
             println("name is :$name")
@@ -128,6 +125,7 @@ open class A {
     }
 }
 
+//覆盖原则
 interface B {
     fun f() {
         print("B")
@@ -157,6 +155,7 @@ class C() : A(), B, B1 {
     }
 }
 
+//抽象类继承
 open class Base {
     open fun f() {}
 }
