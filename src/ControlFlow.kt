@@ -96,4 +96,5 @@ fun main(args: Array<String>) {
     //降序遍历到3截止
     for (i in 10 downTo 3)
         println("b:$i")
+
 }
