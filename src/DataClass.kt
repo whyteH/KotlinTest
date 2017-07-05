@@ -7,7 +7,7 @@ fun main(args: Array<String>) {
     println(p.name + " is " + p.age)
     val (name, age) = p
     println(name + " is " + age)
-    
+
     val newP = p.copy(age = 19)
     println(newP.name + " is " + newP.age)
 
