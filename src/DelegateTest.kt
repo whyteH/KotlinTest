@@ -69,3 +69,18 @@ class User1(map: Map<String, Any?>) {
     val name: String by map
     val age: Int     by map
 }
+
+interface A1 {
+    fun isValid(): Boolean
+    fun print()
+}
+
+fun example(a: () -> A1) {
+    val b by lazy(a)
+
+    if (b.isValid()) {
+        b.print()
+    }
+}
+
+
